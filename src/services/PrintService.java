@@ -3,15 +3,19 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintService {
+/*
+ * Classe parametrizada com generics.
+ * */
 
-	private List<Integer> list = new ArrayList<>();
+public class PrintService<Type>{
 
-	public void addValue(Integer value) {
+	private List<Type> list = new ArrayList<>();
+
+	public void addValue(Type value) {
 		list.add(value);
 	}
 	
-	public Integer first() {
+	public Type first() {
 		if (list.isEmpty()) {
 			throw new IllegalStateException("List is empty");
 		}
